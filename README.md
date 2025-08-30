@@ -75,33 +75,34 @@ Server runs at: http://localhost:5000
 ## 📡 API Endpoints
 
 ### 🔐 Auth Routes
-POST   /api/auth/signup    -> Register new user
-POST   /api/auth/login     -> Login user
-POST   /api/auth/verify    -> Verify OTP
-POST   /api/auth/reset     -> Reset password
+- **POST**   `/api/auth/signup`       → Register a new user  
+- **POST**   `/api/auth/login`        → Login user  
+- **POST**   `/api/auth/verify`       → Verify OTP  
+- **POST**   `/api/auth/reset`        → Reset password  
 
 ### 🎓 Course Routes
-GET    /api/courses        -> Get all courses
-GET    /api/courses/:id    -> Get single course
-POST   /api/courses        -> Create course (Instructor)
-PUT    /api/courses/:id    -> Update course (Instructor)
-DELETE /api/courses/:id    -> Delete course (Instructor)
+- **GET**    `/api/courses`           → Get all courses  
+- **GET**    `/api/courses/:id`       → Get single course  
+- **POST**   `/api/courses`           → Create a course (Instructor only)  
+- **PUT**    `/api/courses/:id`       → Update a course (Instructor only)  
+- **DELETE** `/api/courses/:id`       → Delete a course (Instructor only)  
 
 ### 💳 Payment Routes
-POST   /api/payments/order  -> Create order
-POST   /api/payments/verify -> Verify payment
+- **POST**   `/api/payments/order`    → Create payment order  
+- **POST**   `/api/payments/verify`   → Verify payment  
 
 
 ## 📁 Project Structure
-study-notion-backend/
-│── config/        # DB & Cloudinary configs
-│── controllers/   # Route controllers
-│── middlewares/   # Custom middlewares (auth, error handling)
-│── models/        # Mongoose models
-│── routes/        # API routes
-│── utils/         # Helper utilities (mail, JWT, etc.)
-│── index.js       # Entry point
-│── package.json   # Dependencies & scripts
-│── .env           # Environment variables
-│── .gitignore     # Ignored files
 
+study-notion-backend/  
+│── **config/**         → Database & Cloudinary configuration  
+│── **controllers/**    → Business logic for routes  
+│── **middlewares/**    → Auth & custom middleware  
+│── **models/**         → Mongoose models (User, Course, etc.)  
+│── **routes/**         → API route definitions  
+│── **utils/**          → Utility functions (mail, JWT, etc.)  
+│── **mail/**           → Email templates & helpers  
+│── **index.js**        → Application entry point  
+│── **package.json**    → Project dependencies & scripts  
+│── **.env**            → Environment variables (not committed)  
+│── **.gitignore**      → Ignored files & folders  
