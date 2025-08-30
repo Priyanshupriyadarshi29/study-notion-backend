@@ -70,3 +70,38 @@ MAIL_PASS=your_email_password
 npm run dev
 
 Server runs at: http://localhost:5000
+
+
+## 📡 API Endpoints
+
+### 🔐 Auth Routes
+POST   /api/auth/signup    -> Register new user
+POST   /api/auth/login     -> Login user
+POST   /api/auth/verify    -> Verify OTP
+POST   /api/auth/reset     -> Reset password
+
+### 🎓 Course Routes
+GET    /api/courses        -> Get all courses
+GET    /api/courses/:id    -> Get single course
+POST   /api/courses        -> Create course (Instructor)
+PUT    /api/courses/:id    -> Update course (Instructor)
+DELETE /api/courses/:id    -> Delete course (Instructor)
+
+### 💳 Payment Routes
+POST   /api/payments/order  -> Create order
+POST   /api/payments/verify -> Verify payment
+
+
+## 📁 Project Structure
+study-notion-backend/
+│── config/        # DB & Cloudinary configs
+│── controllers/   # Route controllers
+│── middlewares/   # Custom middlewares (auth, error handling)
+│── models/        # Mongoose models
+│── routes/        # API routes
+│── utils/         # Helper utilities (mail, JWT, etc.)
+│── index.js       # Entry point
+│── package.json   # Dependencies & scripts
+│── .env           # Environment variables
+│── .gitignore     # Ignored files
+
